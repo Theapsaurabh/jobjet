@@ -36,6 +36,7 @@ Clone the repo:
 ```bash
 git clone https://github.com/yourusername/jobjet.git
 cd jobjet
+'''
 Install dependencies:
 
 bash
