@@ -29,68 +29,162 @@ It helps job seekers find opportunities and employers post listings efficiently.
 
 ---
 
-## Getting Started 🏃‍♂️
+Development:
+---
 
-Clone the repo:
+**🛠 ESLint & Prettier - Code quality and formatting**
 
+🐛 TypeScript - Full type safety
+🔧 Hot Reload - Instant development feedback
+🏁 Quick Start
+
+### Prerequisites
+---
+- Node.js 18+
+- PostgreSQL database
+- npm 
+
+Installation
+---
+**1 Clone the repository**
 ```bash
 git clone https://github.com/yourusername/jobjet.git
 cd jobjet
-'''
-Install dependencies:
+```
 
-bash
-Copy code
+**2 Install dependencies**
+```bash
 npm install
 # or
-yarn
-# or
-pnpm install
-Create a .env file with your environment variables:
+yarn install
 
-env
-Copy code
-DATABASE_URL=your_postgres_url
-NEXT_PUBLIC_API_URL=http://localhost:3000
-JWT_SECRET=your_jwt_secret
-Run the development server:
+```
+**3 Environment Setup**
+Create a .env file in the root directory:
+```bash
+DATABASE_URL="postgresql://username:password@localhost:5432/jobjet"
+NEXTAUTH_SECRET="your-secret-key"
+NEXTAUTH_URL="http://localhost:3000"
+JWT_SECRET="your-jwt-secret"
 
-bash
-Copy code
+```
+**4 Database Setup**
+```bash
+# Generate database migrations
+npm run db:generate
+
+# Push schema to database
+npm run db:push
+
+```
+**5 Start Development Server**
+```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-Open http://localhost:3000 in your browser to see the app.
 
-Project Structure 📂
-bash
-Copy code
+```
+**6 Open your browser**
+Navigate to http://localhost:3000
+
+### Folder Structure
+---
+
+```bash
 jobjet/
-├─ app/                # Next.js app pages & routes
-├─ components/         # Reusable UI components
-├─ db/                 # Drizzle ORM schema & database setup
-├─ pages/api/          # API routes (if any)
-├─ public/             # Static assets
-├─ styles/             # Tailwind / global styles
-└─ README.md
-Contributing 🤝
-Contributions are welcome!
+├── app/                    # Next.js 14 App Router
+│   ├── (auth)/            # Authentication routes
+│   ├── (dashboard)/       # Dashboard routes
+│   ├── api/               # API routes
+│   ├── globals.css        # Global styles
+│   └── layout.tsx         # Root layout
+├── components/            # Reusable UI components
+│   ├── ui/               # Shadcn/UI components
+│   ├── forms/            # Form components
+│   ├── dashboard/        # Dashboard components
+│   └── layout/           # Layout components
+├── lib/                  # Utility libraries
+│   ├── auth.ts          # Authentication config
+│   ├── db.ts            # Database configuration
+│   └── utils.ts         # Helper functions
+├── db/                  # Database schema
+│   ├── schema.ts        # Drizzle schema
+│   └── migrations/      # Database migrations
+├── public/              # Static assets
+├── types/               # TypeScript type definitions
+└── tailwind.config.js   # Tailwind configuration
+```
 
-Fork the repo
+🎨 UI Components
+---
+- JobJet uses Shadcn/UI for a consistent, accessible, and beautiful user interface:
 
-Create a new branch (git checkout -b feature/your-feature)
+- Cards - Job listings and company profiles
 
-Commit your changes (git commit -m "Add your feature")
+- Forms - Registration, login, and job applications
 
-Push to your branch (git push origin feature/your-feature)
+- Tables - Applicant tracking and job management
 
-Open a Pull Request
+- Dialogs & Modals - Smooth user interactions
 
-License 📝
-This project is licensed under the MIT License.
+- Navigation - Intuitive menu system
 
-⚠️ Note: MIT allows others to modify your code freely. If you want to prevent modifications in forks, you would need a more restrictive license.
+🔐 Authentication
+---
+**Secure authentication system featuring:**
 
-Made with ❤️ by Saurabh Pandey
+- JWT-based sessions
+
+- Role-based access control (Job Seeker, Employer, Admin)
+
+- Protected API routes
+
+- Secure password hashing
+
+📊 Database Schema
+---
+**Key entities**:
+
+**Users** - Job seekers and employers
+
+**Jobs** - Job listings with rich metadata
+
+**Applications** - Job applications and status
+
+**Companies** - Employer profiles and information
+
+**Categories** - Job categories and skills
+
+🤝 Contributing
+---
+**We welcome contributions! Please see our Contributing Guide for details**.
+
+- Fork the repository
+
+- Create your feature branch (git checkout -b feature/amazing-feature)
+
+- Commit your changes (git commit -m 'Add some amazing feature')
+
+- Push to the branch (git push origin feature/amazing-feature)
+
+**Open a Pull Request**
+
+👥 Team
+--
+**Saurabh Pandey** - Lead Developer & Maintainer.
+
+## If you need help with:
+---
+
+**Setup issues** - Check the troubleshooting guide
+
+**Feature requests** - Open an issue on GitHub
+
+**Bugs** - Report with detailed information
+
+### 🌟 Show Your Support
+**Give a ⭐️ if this project helped you!**
+
+Built with ❤️ using Next.js, Tailwind CSS, and Shadcn/UI
+
+Connect talents with opportunities. Power careers with technology.
