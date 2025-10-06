@@ -29,53 +29,54 @@ It helps job seekers find opportunities and employers post listings efficiently.
 
 ---
 
-JobJet - Development Progress Documentation
-📅 Day 01: Project Setup & Authentication UI
-✅ Completed Tasks
-1. Project Initialization & Setup
-✅ Set up Next.js 14 project with TypeScript
+### JobJet - Development Progress Documentation
+---
+**📅 Day 01: Project Setup & Authentication UI**
+Completed Tasks
+**1. Project Initialization & Setup**
+- Set up Next.js 14 project with TypeScript
 
-✅ Configured Tailwind CSS with custom animations
+- Configured Tailwind CSS with custom animations
 
-✅ Installed and configured Shadcn/UI components
+- Installed and configured Shadcn/UI components
 
-✅ Set up Lucide React icons for beautiful icons
+- Set up Lucide React icons for beautiful icons
 
-✅ Created project structure and folder organization
+- Created project structure and folder organization
 
-2. Design System & Global Styling
-✅ Custom global CSS with OKLCH color system
+**2. Design System & Global Styling**
+- Custom global CSS with OKLCH color system
 
-✅ Dark/Light mode support configuration
+- Dark/Light mode support configuration
 
-✅ Custom animation keyframes (fade-in, slide-up, slide-down)
+- Custom animation keyframes (fade-in, slide-up, slide-down)
 
-✅ Professional color palette and typography system
+- Professional color palette and typography system
 
-✅ Responsive design foundation
+- Responsive design foundation
 
-3. Registration Page Development
-✅ Beautiful gradient background design
+**3. Registration Page Development**
+- Beautiful gradient background design
 
-✅ Role selection cards (Job Seeker vs Employer)
+- Role selection cards (Job Seeker vs Employer)
 
-✅ Form fields: Name, Username, Email, Password, Confirm Password
+- Form fields: Name, Username, Email, Password, Confirm Password
 
-✅ Password visibility toggle functionality
+- Password visibility toggle functionality
 
-✅ Terms & Conditions checkbox
+- Terms & Conditions checkbox
 
-✅ Loading states with spinner animations
+- Loading states with spinner animations
 
-✅ Smooth hover effects and transitions
+- Smooth hover effects and transitions
 
-✅ Professional animations (fade-in, slide-up)
+- Professional animations (fade-in, slide-up)
 
-✅ Responsive design for all devices
+- Responsive design for all devices
 
-✅ Form validation structure
+- Form validation structure
 
-4. Login Page Development
+**4. Login Page Development**
 ✅ Matching design with registration page
 
 ✅ Email & Password fields with icons
@@ -103,27 +104,10 @@ JobJet - Development Progress Documentation
 
 ✅ Select dropdown components
 
-🎯 Technical Achievements
-TypeScript interfaces for all form data
 
-Responsive design that works on mobile, tablet, and desktop
 
-Smooth animations with CSS keyframes and Tailwind
-
-Professional UI/UX with modern design principles
-
-Clean code structure with reusable components
-
-📱 Features Implemented
-✨ Visual Appeal: Gradient backgrounds, smooth animations
-
-🔧 User Experience: Loading states, hover effects, focus states
-
-📱 Responsiveness: Mobile-first design approach
-
-🎨 Consistency: Unified design system across pages
-
-📅 Day 02: Database Schema & Backend Foundation
+### 📅 Day 02: Database Schema & Backend Foundation
+---
 ✅ Completed Tasks
 1. Database Schema Design
 ✅ User schema with essential registration fields
@@ -156,6 +140,7 @@ Clean code structure with reusable components
 
 4. Enhanced User Schema
 typescript
+``bash
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
   name: varchar("name", { length: 255 }).notNull(),
@@ -165,8 +150,8 @@ export const users = pgTable("users", {
   role: varchar("role", { length: 20 }).notNull().default('applicant'),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
-});
-5. Development Workflow Setup
+```
+6. Development Workflow Setup
 ✅ Drizzle Kit commands for database management
 
 ✅ Migration generation and execution
